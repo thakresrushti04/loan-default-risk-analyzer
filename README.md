@@ -2,7 +2,7 @@
 
 A Streamlit app and analysis notebook that estimate the chance a borrower defaults, using borrower data only.
 
-![Dashboard](images/app-dashboard.png)
+![Dashboard](images/01-dashboard.png)
 
 ## Main finding
 
@@ -10,7 +10,7 @@ A Random Forest that sees **only borrower data** reached a ROC-AUC of **0.878** 
 
 Grade and rate are set by the lender after it has already judged the risk, so using them to predict risk is partly circular. I left them out of the final model and report them only as a benchmark.
 
-![ROC curves](images/chart-roc-curve.png)
+![ROC curves](images/05-roc-curve.png)
 
 ## Model comparison
 
@@ -29,11 +29,11 @@ Only 22% of loans default, so accuracy would be misleading. I evaluated on recal
 
 At the default 0.5 cutoff the final model misses 37% of real defaults. Lowering the cutoff catches more defaults but flags more good borrowers.
 
-![Threshold trade-off](images/chart-threshold-tradeoff.png)
+![Threshold trade-off](images/06-threshold-tradeoff.png)
 
 I chose **0.35**. On the test set:
 
-![Confusion matrix](images/chart-confusion-matrix.png)
+![Confusion matrix](images/07-confusion-matrix.png)
 
 - Defaults caught: **77.0%** (1,092 of 1,418)
 - Flags that were real defaults: **53.8%**
@@ -49,7 +49,7 @@ I have no real cost figures for a missed default versus a declined good borrower
 - **Affordability drives the model.** Loan size vs income (0.257), income (0.233) and loan amount (0.113) make up about 60% of the model's feature importance.
 - **The lender's grade is nearly a verdict.** Default rates run from 10.0% (grade A) to 59.1% (grade D). Grades F and G have few loans (241 and 64), so I don't read much into them.
 
-![Portfolio insights](images/app-portfolio-insights.png)
+![Portfolio insights](images/03-portfolio-insights.png)
 
 ## The app
 
@@ -61,9 +61,9 @@ Enter an applicant in the sidebar and the app shows the default probability, a r
 - **Model performance:** test-set results and what drives the prediction
 - Three sample applicants (Safe, Med, Risky) and warnings when an input is outside the range the model was trained on
 
-![What-if](images/app-what-if.png)
+![What-if](images/02-what-if.png)
 
-![Model performance](images/app-model-performance.png)
+![Model performance](images/04-model-performance.png)
 
 ## Data and method
 
