@@ -47,7 +47,7 @@ I have no real cost figures for a missed default versus a declined good borrower
 - **Loan size vs income matters most.** In four of the five income bands, loans above 30% of income default at 57-80%. The top income band is the exception (39.7%), but it has only 58 loans, so that figure is unreliable.
 - **Renters default more.** 31.6% for renters, against 12.6% for mortgage holders and 7.5% for owners.
 - **Affordability drives the model.** Loan size vs income (0.257), income (0.233) and loan amount (0.113) make up about 60% of the model's feature importance.
-- **The lender's grade is nearly a verdict.** Default rates run from 10.0% (grade A) to 59.1% (grade D). Grades F and G have few loans (241 and 64), so I don't read much into them.
+- **The lender's grade is nearly a verdict.** Default rates rise from 10.0% (grade A) to 64.4% (grade E). Grades F and G are higher still (70.5% and 98.4%) but have only 241 and 64 loans, so I don't read much into them.
 
 ![Portfolio insights](images/03-portfolio-insights.png)
 
